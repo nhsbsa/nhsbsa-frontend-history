@@ -1,0 +1,109 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  About - NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-xl">Frontend timeline</h1>
+
+      <h2 class="nhsuk-heading-l">2021</h2>
+
+      <div class="nhsbsa-timeline">
+        <!-- September - October 2021 -->
+        <div class="nhsbsa-timeline__item">
+          <div class="nhsbsa-timeline__header">
+            <h3 class="nhsuk-heading-m">PECs Web - Accessibility fixes</h3>
+          </div>
+          <p class="nhsbsa-timeline__date">September - October 2021</p>
+          <p class="nhsbsa-timeline__description">Asked by the business to complete fix accessibility issues raised by t&p.</p>
+          
+          <h4 class="nhsuk-heading-s">Notes</h4>
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li class="nhsbsa-timeline__document-item"><a href="https://bsa2468.atlassian.net/wiki/spaces/BPPC/pages/3472064682/PECS+Web+Application">PECS web setup docs</a></li>
+            <li class="nhsbsa-timeline__document-item"><a href="https://dps-gitlab.service.nhsbsa/prescriptions/TLRS/pecs-web">Gitlab repo</a></li>
+            <li class="nhsbsa-timeline__document-item"><a href="https://web.microsoftstream.com/video/6d1158f9-743c-41f5-865b-90393f342714">Set up video (need to request permission from the Service desk)</a></li>
+            <li class="nhsbsa-timeline__document-item"><a href="/services/extra/pecs-web">PECS web Service info</a></li>
+          </ul>
+        </div>
+        <!-- /. -->
+        
+        <!-- June - September 2021 -->
+        <div class="nhsbsa-timeline__item">
+          <div class="nhsbsa-timeline__header">
+            <h3 class="nhsuk-heading-m">NHSUK toolkit update</h3>
+          </div>
+          <p class="nhsbsa-timeline__date">June - September 2021</p>
+          <p class="nhsbsa-timeline__description">Worked on upgrading the Matex Apply, Matex Register and Am I exempt services into the NHSUK toolkit.</p>
+          
+          <h4 class="nhsuk-heading-s">Notes</h4>
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li class="nhsbsa-timeline__document-item"><a href="https://bsa2468.atlassian.net/wiki/spaces/BPPC/pages/3443753079/Toolkit+Changes+Benefits">Benefits of using the NHSUK toolkit</a></li>
+            <li class="nhsbsa-timeline__document-item"><a href="https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/2098397227/NHSBSA+Front+End+Toolkit">Documentation on converting to the NHSUK toolkit using a webjar</a></li>
+          </ul>
+        </div>
+        
+        <!-- March - May 2021 -->
+        <div class="nhsbsa-timeline__item">
+          <div class="nhsbsa-timeline__header">
+            <h3 class="nhsuk-heading-m">Document Manager - Accessibility fixes</h3>
+          </div>
+          <p class="nhsbsa-timeline__date">March - May 2021</p>
+          <p class="nhsbsa-timeline__description">Asked by the business to complete accessibility fixes on Document manager.</p>
+          
+          <h4 class="nhsuk-heading-s">Notes</h4>
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li class="nhsbsa-timeline__document-item">The code is hosted on svn</li>
+            <li class="nhsbsa-timeline__document-item">The document manager code base is used to create different versions of document manager for different departments. We focussed on PPC doc manager and PECs doc manager</li>
+            <li class="nhsbsa-timeline__document-item">As their hadn't been any development work on Doc Manager for years, we had problems deploying to a test environment. A lot of work was required by websphere to connect document repistories to the new doc man front end</li>
+          </ul>
+        </div>
+
+        <!-- March - May 2021 -->
+        <div class="nhsbsa-timeline__item">
+          <div class="nhsbsa-timeline__header">
+            <h3 class="nhsuk-heading-m">LIS - Students and Accessible autocomplete</h3>
+          </div>
+          <p class="nhsbsa-timeline__date">March - May 2021</p>
+          <p class="nhsbsa-timeline__description">Complete work on the student section of LIS, this included implementing GOV's accessible autocomplete component.</p>
+          
+          <h4 class="nhsuk-heading-s">Notes</h4>
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li class="nhsbsa-timeline__document-item"><a href="https://alphagov.github.io/accessible-autocomplete/">Autocomplete component</a></li>
+            <li class="nhsbsa-timeline__document-item"><a href="https://lis-student.herokuapp.com/">Student prototype (username/pw: student_lis/student) </a></li>
+            <li class="nhsbsa-timeline__document-item">Accessible autocomplete is generated via JS, so a non JS solution is also needed for users with JS disabled</li>
+            <li class="nhsbsa-timeline__document-item"><a href="/services/lis">LIS Service info</a></li>
+          </ul>
+        </div>
+
+        <!-- January - March 2021 -->
+        <div class="nhsbsa-timeline__item">
+          <div class="nhsbsa-timeline__header">
+            <h3 class="nhsuk-heading-m">Implement the NHSUK Cookie banner</h3>
+          </div>
+          <p class="nhsbsa-timeline__date">January - March 2021</p>
+          <p class="nhsbsa-timeline__description">We had to implement the NHSUK cookie banner component on all HWHC services in order to meet regulations.</p>
+          
+          <h4 class="nhsuk-heading-s">Notes</h4>
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li class="nhsbsa-timeline__document-item"><a href="https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/3435626627/Cookie+banner">Guide on how to implement the cookie banner</a></li>
+            <li class="nhsbsa-timeline__document-item"><a href="https://cookie-banner-bsa.netlify.app">Cookie banner prototype</a></li>
+          </ul>
+        </div>
+      </div> 
+    </div>
+  </div>
+  <style>
+    
+  </style>
+  
+{% endblock %}
