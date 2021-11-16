@@ -6,26 +6,56 @@
 
 {% block beforeContent %}
   {{ breadcrumb({
-    href: "/",
-    text: "Home"
+    items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ],
+  href: "/hwhc-services",
+  text: "HWHC services"
   }) }}
 {% endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <h1 class="nhsuk-heading-xl">Frontend timeline</h1>
+      <h1 class="nhsuk-heading-xl">HWHC timeline</h1>
 
       <h2 class="nhsuk-heading-l">2021</h2>
 
       <div class="nhsbsa-timeline">
+        <!-- October - November -->
+        <div class="nhsbsa-timeline__item">
+          <div class="nhsbsa-timeline__header">
+            <h3 class="nhsuk-heading-m">Toolkit update</h3>
+          </div>
+          <p class="nhsbsa-timeline__date">October - November 2021</p>
+          <p class="nhsbsa-timeline__description">Upgrading PPC Online to the NHSUK toolkit.</p>
+          <p class="nhsbsa-timeline__description">Updating Eligibility checker to a newer version of the elements toolkit to upgrade radio buttons and checkboxes so that they work on Safari with speech recognition software.</p>
+        </div>
+        <!-- October 2021 -->
+        <div class="nhsbsa-timeline__item">
+          <div class="nhsbsa-timeline__header">
+            <h3 class="nhsuk-heading-m">LIS form ordering</h3>
+          </div>
+          <p class="nhsbsa-timeline__date">October 2021</p>
+          <p class="nhsbsa-timeline__description">Asked by the business to complete fixes for accessibility issues raised by T&P.</p>
+          
+          <h4 class="nhsuk-heading-xs">Notes</h4>
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li class="nhsbsa-timeline__document-item">The code is hosted on svn</li>
+            <li class="nhsbsa-timeline__document-item"><a href="https://applications.nhsbsa.nhs.uk/LISWebAppStaticData/begin.do">Live site</a></li>
+          </ul>
+        </div>
+        <!-- /. -->
         <!-- September - October 2021 -->
         <div class="nhsbsa-timeline__item">
           <div class="nhsbsa-timeline__header">
             <h3 class="nhsuk-heading-m">PECs Web - Accessibility fixes</h3>
           </div>
           <p class="nhsbsa-timeline__date">September - October 2021</p>
-          <p class="nhsbsa-timeline__description">Asked by the business to complete fix accessibility issues raised by t&p.</p>
+          <p class="nhsbsa-timeline__description">Asked by the business to complete fixes for accessibility issues raised by T&P.</p>
           
           <h4 class="nhsuk-heading-xs">Notes</h4>
           <ul class="nhsuk-list nhsuk-list--bullet">
@@ -64,7 +94,7 @@
           <ul class="nhsuk-list nhsuk-list--bullet">
             <li class="nhsbsa-timeline__document-item">The code is hosted on svn</li>
             <li class="nhsbsa-timeline__document-item">The document manager code base is used to create different versions of document manager for different departments. We focussed on PPC doc manager and PECs doc manager</li>
-            <li class="nhsbsa-timeline__document-item">As their hadn't been any development work on Doc Manager for years, we had problems deploying to a test environment. A lot of work was required by websphere to connect document repistories to the new doc man front end</li>
+            <li class="nhsbsa-timeline__document-item">As there hadn't been any development work on Doc Manager for years, we had problems deploying to a test environment. A lot of work was required by websphere to connect document repistories to the new doc man front end</li>
           </ul>
         </div>
 

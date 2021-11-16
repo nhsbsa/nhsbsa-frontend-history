@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  About - NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  
+  <div class="nhsuk-grid-row">
+    <div id="service-column" class="nhsuk-grid-column-two-thirds">
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption"><h1 class="nhsuk-heading-l">Additional projects</h1></caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col">
+              Project
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Tech stack
+            </th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><a href="#">NHSBSA Digital Jobs</a></td>
+            <td class="nhsuk-table__cell">
+              <span class="tech-tag wordpress-tag">Wordpress</span>
+              <span class="tech-tag html-tag">HTML</span>
+              <span class="tech-tag css-tag">CSS</span>
+              <span class="tech-tag javascript-tag">Javascript</span>
+              <span class="tech-tag php-tag">PHP</span>
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><a href="#">NHS Nursing Jobs</a></td>
+            <td class="nhsuk-table__cell">
+              <span class="tech-tag wordpress-tag">Wordpress</span>
+              <span class="tech-tag html-tag">HTML</span>
+              <span class="tech-tag css-tag">CSS</span>
+              <span class="tech-tag javascript-tag">Javascript</span>
+              <span class="tech-tag php-tag">PHP</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

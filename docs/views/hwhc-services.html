@@ -19,36 +19,30 @@
   </div>
   <ul class="nhsuk-grid-row nhsuk-card-group">
     <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-      <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card">
         <div class="nhsuk-card__content">
-          <p id="service-amount" class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">5 <span class="nhsuk-u-visually-hidden">Services</span></p><a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Services</a>
+          <p id="service-amount" class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">5 <span class="nhsuk-u-visually-hidden">Services</span></p>Services
         </div>
       </div>
     </li>
 
     <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-      <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card">
         <div class="nhsuk-card__content">
-          <p id="tech-amount" class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">6 <span class="nhsuk-u-visually-hidden">Languages</span></p><a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Languages</a>
+          <p id="tech-amount" class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">6 <span class="nhsuk-u-visually-hidden">Languages</span></p>Languages
         </div>
       </div>
     </li>
 
-    <!-- <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-      <div class="nhsuk-card nhsuk-card--clickable">
-        <div class="nhsuk-card__content">
-          <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">8 <span class="nhsuk-u-visually-hidden">Services</span></p><a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Services</a>
-        </div>
-      </div>
+    <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+      {{ card({
+        "href": "hwhc-timeline",
+        "clickable": "true",
+        "heading": "Timeline",
+        "headingClasses": "nhsuk-heading-m",
+        "description": "A record of the frontend work that's been completed for HWHC services."
+      }) }}
     </li>
-
-    <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-      <div class="nhsuk-card nhsuk-card--clickable">
-        <div class="nhsuk-card__content">
-          <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">33 <span class="nhsuk-u-visually-hidden">Messages</span></p><a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Messages</a>
-        </div>
-      </div>
-    </li> -->
   </ul>
   <div class="nhsuk-grid-row">
     <div id="service-column" class="nhsuk-grid-column-two-thirds">
@@ -66,17 +60,18 @@
         </thead>
         <tbody class="nhsuk-table__body">
           <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell"><a class="service__link" href="#">Low income scheme</a></td>
+            <td class="nhsuk-table__cell"><a class="service__link" href="/hwhc-services/team-1#lis">Low income scheme</a></td>
             <td class="nhsuk-table__cell">
               <span class="tech-tag java-tag">Java</span>
               <span class="tech-tag html-tag">HTML</span>
               <span class="tech-tag css-tag">CSS</span>
               <span class="tech-tag javascript-tag">Javascript</span>
               <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+              <span class="tech-tag yaml-tag">YAML</span>
             </td>
           </tr>
           <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell"><a class="service__link" href="#">Eligibility checker</a></td>
+            <td class="nhsuk-table__cell"><a class="service__link" href="/hwhc-services/team-1#ec">Eligibility checker</a></td>
             <td class="nhsuk-table__cell">
               <span class="tech-tag java-tag">Java</span>
               <span class="tech-tag html-tag">HTML</span>
@@ -164,7 +159,7 @@
       </table>
 
       <table class="nhsuk-table">
-        <caption class="nhsuk-table__caption"><h2 class="nhsuk-heading-l">Additional projects</h2></caption>
+        <caption class="nhsuk-table__caption"><h2 class="nhsuk-heading-l">Additional HWHC projects</h2></caption>
         <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
             <th role="columnheader" class="" scope="col">
@@ -204,26 +199,6 @@
               <span class="tech-tag css-tag">CSS</span>
               <span class="tech-tag javascript-tag">Javascript</span>
               <span class="tech-tag jsp-tag">JSP</span>
-            </td>
-          </tr>
-          <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell"><a href="#">NHS Digital Jobs</a></td>
-            <td class="nhsuk-table__cell">
-              <span class="tech-tag wordpress-tag">Wordpress</span>
-              <span class="tech-tag html-tag">HTML</span>
-              <span class="tech-tag css-tag">CSS</span>
-              <span class="tech-tag javascript-tag">Javascript</span>
-              <span class="tech-tag php-tag">PHP</span>
-            </td>
-          </tr>
-          <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell"><a href="#">NHS Nursing Jobs</a></td>
-            <td class="nhsuk-table__cell">
-              <span class="tech-tag wordpress-tag">Wordpress</span>
-              <span class="tech-tag html-tag">HTML</span>
-              <span class="tech-tag css-tag">CSS</span>
-              <span class="tech-tag javascript-tag">Javascript</span>
-              <span class="tech-tag php-tag">PHP</span>
             </td>
           </tr>
         </tbody>

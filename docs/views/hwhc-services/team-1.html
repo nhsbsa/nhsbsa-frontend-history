@@ -1,0 +1,105 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  HWHC Frontend history - NHS Business Service Authority
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ],
+  href: "/hwhc-services",
+  text: "HWHC services"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- Change the page title here -->
+      <h1 class="nhsuk-heading-l">
+        HWHC - Team 1
+      </h1>
+    </div>
+
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="lis" class="nhsuk-heading-l">Low income scheme</h2>
+      <p class="nhsuk-body-l">Toolkit version: Elements v1.0.22954</p>
+
+      <p>If you have a low income, the NHS Low Income Scheme could help you pay for:</p>
+
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>NHS prescription charges</li>
+        <li>NHS dental treatment charges</li>
+        <li>the cost of sight tests, glasses and contact lenses</li>
+        <li>the cost of travelling to receive NHS treatment</li>
+        <li>NHS wigs and fabric supports (check with your hospital for their arrangements for supplying NHS wigs)</li>
+      </ul>
+
+      <h3 class="nhsuk-body-m">Assessor view</h3>
+
+      <p>The assessor view is built into LIS and is used by a team of assessors at Bridge house, who get a play back of applications in their own dashboard view</p>
+
+      <hr>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <nav class="link-nav" style="border-top:5px solid #005eb8; padding-top:10px;">
+        <h3 class="nhsuk-heading-m">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="#">Gitlab repo</a></li>
+          <li><a href="#">Live service</a></li>
+          <li><a href="#">Test environmnet</a></li>
+          <li><a href="#">Environment set up docs</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="ec" class="nhsuk-heading-l">Eligibility checker</h2>
+      <p class="nhsuk-body-l">Toolkit version: Elements v1.0.22954</p>
+      <p>The Eligibility checker is a service that  allows users to see if they get help to pay these NHS charges:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>NHS prescriptions</li>
+        <li>NHS dental treatment</li>
+        <li>sight tests, glasses and contact lenses</li>
+        <li>travel to receive NHS treatment</li>
+        <li>NHS wigs and fabric supports</li>
+      </ul>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <nav class="link-nav" style="border-top:5px solid #005eb8; padding-top:10px;">
+        <h3 class="nhsuk-heading-m">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="#">Gitlab repo</a></li>
+          <li><a href="#">Live service</a></li>
+          <li><a href="#">Test environmnet</a></li>
+          <li><a href="#">Environment set up docs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
+{% endblock %}

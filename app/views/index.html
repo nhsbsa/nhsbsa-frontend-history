@@ -31,68 +31,60 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <!-- Change the page title here -->
-      <h1>
-        HWHC Frontend history
-      </h1>
-      <p class="nhsuk-lede-text">A detailed repository of the Help with Health Cost (HWHC) frontend development.</p>
+      <h1 class="nhsuk-heading-xl">NHSBSA Frontend history</h1>
+      <p class="nhsuk-lede-text">A collection of resources and documentation for frontend development at the NHSBSA.</p>
     </div>
   </div>
+  <h2 class="nhsuk-heading-l">Project teams</h2>
   <ul class="nhsuk-grid-row nhsuk-card-group">
-    <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-      <div class="nhsuk-card nhsuk-card--clickable">
-        <div class="nhsuk-card__content">
-          <h2 class="nhsuk-card__heading nhsuk-heading-m">
-            <a class="nhsuk-card__link" href="/hwhc-services">HWHC Services</a>
-          </h2>
-          <p class="nhsuk-card__description">A quick guide to Help with Health Cost services.</p>
-        </div>
-      </div>
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      {{ card({
+        "href": "hwhc-services",
+        "clickable": "true",
+        "heading": "HWHC Services",
+        "headingClasses": "nhsuk-heading-m",
+        "description": "A guide to Help with Health Cost services."
+      }) }}
     </li>
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      {{ card({
+        "href": "additional-projects",
+        "clickable": "true",
+        "heading": "Additional projects",
+        "headingClasses": "nhsuk-heading-m",
+        "description": "Online projects being worked outside of project teams."
+      }) }}
+    </li>
+  </ul>
 
-    <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-      <div class="nhsuk-card nhsuk-card--clickable">
-        <div class="nhsuk-card__content">
-          <h2 class="nhsuk-card__heading nhsuk-heading-m">
-            <a class="nhsuk-card__link" href="/hwhc-timeline">Frontend timeline</a>
-          </h2>
-          <p class="nhsuk-card__description">A record of the frontend work that's been completed.</p>
-        </div>
-      </div>
+  <h2 class="nhsuk-heading-l">Resources</h2>
+  <ul class="nhsuk-grid-row nhsuk-card-group">
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      {{ card({
+        "href": "#",
+        "clickable": "true",
+        "heading": "Accessibility",
+        "headingClasses": "nhsuk-heading-m",
+        "description": "Information and tips for developing accessible services."
+      }) }}
     </li>
-
-    <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-      <div class="nhsuk-card nhsuk-card--clickable">
-        <div class="nhsuk-card__content">
-          <h2 class="nhsuk-card__heading nhsuk-heading-m">
-            <a class="nhsuk-card__link" href="https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/2098462750/Resources">Resources</a>
-          </h2>
-          <p class="nhsuk-card__description">A collection of resources to help with frontend development</p>
-        </div>
-      </div>
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      {{ card({
+        "href": "custom-components",
+        "clickable": "true",
+        "heading": "Custom components",
+        "headingClasses": "nhsuk-heading-m",
+        "description": "A list of the custom components used across NHSBSA services."
+      }) }}
     </li>
-    <!-- <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-  
-      <div class="nhsuk-card nhsuk-card--clickable">
-        <div class="nhsuk-card__content">
-          <h2 class="nhsuk-card__heading nhsuk-heading-m">
-            <a class="nhsuk-card__link" href="#">Money, work and benefits</a>
-          </h2>
-          <p class="nhsuk-card__description">How to pay for care and support, and where you can get help with costs.</p>
-        </div>
-      </div>
-  
-    </li> -->
-    <!-- <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
-  
-      <div class="nhsuk-card nhsuk-card--clickable">
-        <div class="nhsuk-card__content">
-          <h2 class="nhsuk-card__heading nhsuk-heading-m">
-            <a class="nhsuk-card__link" href="#">Care after a hospital stay</a>
-          </h2>
-          <p class="nhsuk-card__description">Includes hospital discharge and care and support afterwards</p>
-        </div>
-      </div>
-  
-    </li> -->
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      {{ card({
+        "href": "https://bsa2468.atlassian.net/wiki/spaces/CoP/pages/2098462750/Resources",
+        "clickable": "true",
+        "heading": "Additional resources",
+        "headingClasses": "nhsuk-heading-m",
+        "description": "A collection of resources on JIRA to help with frontend development."
+      }) }}
+    </li>
   </ul>
 {% endblock %}
