@@ -1,0 +1,137 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  HWHC Frontend history - NHS Business Service Authority
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ],
+  href: "/hwhc-services",
+  text: "HWHC services"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-l">
+        HWHC - Team 1
+      </h1>
+    </div>
+    <!-- Eligibility checker -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="ec" class="nhsuk-heading-m">Eligibility checker</h2>
+      <p class="nhsuk-body-l">Toolkit version: Elements v1.0.22954</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <img class="service-img" src="/images/hwhc/eligibility-checker.png" />
+      </div>
+      <p>The Eligibility checker is a service that  allows users to see if they get help to pay these NHS charges:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>NHS prescriptions</li>
+        <li>NHS dental treatment</li>
+        <li>sight tests, glasses and contact lenses</li>
+        <li>travel to receive NHS treatment</li>
+        <li>NHS wigs and fabric supports</li>
+      </ul>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-m">Languages</h3>
+        <span class="tech-tag java-tag">Java</span>
+        <span class="tech-tag html-tag">HTML</span>
+        <span class="tech-tag css-tag">CSS</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-m">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="#">EC gitlab repo</a></li>
+          <li><a href="#">EC live service</a></li>
+          <li><a href="#">EC test environmnet</a></li>
+          <li><a href="#">EC environment set up docs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <!-- LIS -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="lis" class="nhsuk-heading-m">Low income scheme</h2>
+      <p class="nhsuk-body-l">Toolkit version: Elements v1.0.22954</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <img class="service-img" src="/images/hwhc/lis.png" />
+      </div>
+      <h3 class="nhsuk-heading-s">Description</h3>
+      <p>If you have a low income, the NHS Low Income Scheme could help you pay for:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>NHS prescription charges</li>
+        <li>NHS dental treatment charges</li>
+        <li>the cost of sight tests, glasses and contact lenses</li>
+        <li>the cost of travelling to receive NHS treatment</li>
+        <li>NHS wigs and fabric supports (check with your hospital for their arrangements for supplying NHS wigs)</li>
+      </ul>
+      <h3 class="nhsuk-heading-s">Notes</h3>
+      <p>As of November 2021 there are 339 pages in the LIS application. The pages are created using YAML, which call HTML/Thymeleaf fragments.</p>
+      <p>LIS is compartmentalised into different sections and each section has a feature flag. When working locally you can enable or disable feature flags depending on which pages you want to see.</p>
+      <p>You can access this at <code>/apply-for-help-with-nhs-costs/direct/test</code>.</p>
+
+      <h3 class="nhsuk-heading-s">Assessor view</h3>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <img class="service-img" src="/images/hwhc/lis-assessor-view.png" />
+      </div>
+      <p>The assessor view is built into LIS and is used by a team of assessors at Bridge house, who get a play back of applications in their own dashboard view.</p>
+      <p>The check your answers screens the users sees are played back to the assessors in the assessor view. It's the same HTML, but we use CSS to change the display in the assessor view.</p>
+      <p>It's on the roadmap to decouple the assessor view from LIS.</p>
+      <p>You can access this at <code>/apply-for-help-with-nhs-costs/sign-in</code>.</p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-m">Languages</h3>
+        <span class="tech-tag java-tag">Java</span>
+        <span class="tech-tag html-tag">HTML</span>
+        <span class="tech-tag css-tag">CSS</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag thymleaf-tag">Thymeleaf</span>
+        <span class="tech-tag yaml-tag">YAML</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-m">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="#">LIS gitlab repo</a></li>
+          <li><a href="#">LIS live service</a></li>
+          <li><a href="#">LIS test environmnet</a></li>
+          <li><a href="#">LIS Environment set up docs</a></li>
+          <li><a href="#">Assessor view</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+{% endblock %}

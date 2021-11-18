@@ -12,3 +12,23 @@
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
 
+/* code */
+li code, p code, td code {
+  background-color: #fff;
+  color: #d14;
+  padding: 2px 8px;
+  word-break: break-word;
+}
+
+/*service pages */
+.service-img{
+  width:200px;
+  border: 1px solid #005eb8;
+}
+.link-nav {
+  border-top:5px solid #005eb8;
+  padding-top:10px;
+}
+.tech-container > .tech-tag {
+  margin-bottom: 5px;
+}
