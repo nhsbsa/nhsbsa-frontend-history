@@ -1,0 +1,173 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  HWHC Frontend history - NHS Business Service Authority
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ],
+  href: "/services/hwhc-services/overview",
+  text: "HWHC services"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-l">
+        Additional HWHC projects
+      </h1>
+    </div>
+    <!-- Eligibility checker -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="doc-man" class="nhsuk-heading-m">Document manager</h2>
+      <!-- <p class="nhsuk-body-l">Toolkit version: Elements v1.0.22954</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <img class="service-img" src="/images/hwhc/eligibility-checker.png" alt="Eligibility checker home page" />
+      </div>
+      <p>The Eligibility checker is a service that allows users to see if they get help to pay these NHS charges:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>NHS prescriptions</li>
+        <li>NHS dental treatment</li>
+        <li>sight tests, glasses and contact lenses</li>
+        <li>travel to receive NHS treatment</li>
+        <li>NHS wigs and fabric supports</li>
+      </ul> -->
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-m">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag jsp-tag">JSP</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-m">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://dps-gitlab.service.nhsbsa/hecs/hwhc-eligibility-guide">EC gitlab repo</a></li>
+          <li><a href="https://services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start">EC live service</a></li>
+          <li><a href="https://dev.services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start">EC dev environment</a></li>
+          <li><a href="https://tst.services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start">EC test environment</a></li>
+          <li><a href="https://bsa2468.atlassian.net/wiki/spaces/LISD/pages/66879628/HwHC+Eligibility+Checker">EC environment set up docs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr>
+  <div class="nhsuk-grid-row">
+    <!-- LIS -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="pecs-web" class="nhsuk-heading-m">PECs Web</h2>
+      <!-- <p class="nhsuk-body-l">Toolkit version: Elements v1.0.22954</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <img class="service-img" src="/images/hwhc/lis.png" alt="LIS home page" />
+      </div>
+      <h3 class="nhsuk-heading-s">Description</h3>
+      <p>If you have a low income, the NHS Low Income Scheme could help you pay for:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>NHS prescription charges</li>
+        <li>NHS dental treatment charges</li>
+        <li>the cost of sight tests, glasses and contact lenses</li>
+        <li>the cost of travelling to receive NHS treatment</li>
+        <li>NHS wigs and fabric supports (check with your hospital for their arrangements for supplying NHS wigs)</li>
+      </ul>
+      <h3 class="nhsuk-heading-s">Notes</h3>
+      <p>As of November 2021 there are 339 pages in the LIS application. The pages are created using YAML, which call HTML/Thymeleaf fragments.</p>
+      <p>LIS is compartmentalised into different sections and each section has a feature flag. When working locally you can enable or disable feature flags depending on which pages you want to see.</p>
+      <p>You can access this at <code>/apply-for-help-with-nhs-costs/direct/test</code>.</p>
+
+      <h3 class="nhsuk-heading-s">Assessor view</h3>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <img class="service-img" src="/images/hwhc/lis-assessor-view.png" alt="LIS assessor view sign in page" />
+      </div>
+      <p>The assessor view is built into LIS and is used by a team of assessors at Bridge house, who get a play back of applications in their own dashboard view.</p>
+      <p>The check your answers screens the users sees are played back to the assessors in the assessor view. It's the same HTML, but we use custom CSS to change the display in the assessor view.</p>
+      <p>It's on the roadmap to decouple the assessor view from LIS.</p>
+      <p>You can access this at <code>/apply-for-help-with-nhs-costs/sign-in</code>.</p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-m">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag jsp-tag">JSP</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-m">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://dps-gitlab.service.nhsbsa/hecs/lis/hwhc-lis-apply-for-help">LIS gitlab repo</a></li>
+          <li><a href="https://services.nhsbsa.nhs.uk/apply-for-help-with-nhs-costs/direct/test">LIS live service</a></li>
+          <li><a href="https://dev.services.nhsbsa.nhs.uk/apply-for-help-with-nhs-costs/direct/test">LIS dev environment</a></li>
+          <li><a href="https://tst.services.nhsbsa.nhs.uk/apply-for-help-with-nhs-costs/direct/test">LIS test environment</a></li>
+          <li><a href="https://bsa2468.atlassian.net/wiki/spaces/LISD/overview">LIS Environment set up docs</a></li>
+          <li><a href="https://services.nhsbsa.nhs.uk/apply-for-help-with-nhs-costs/sign-in">Assessor view live</a></li>
+          <li><a href="https://tst.services.nhsbsa.nhs.uk/apply-for-help-with-nhs-costs/sign-in">Assessor view test</a></li>
+          <li><a href="https://dev.services.nhsbsa.nhs.uk/apply-for-help-with-nhs-costs/sign-in">Assessor view dev</a></li>
+        </ul>
+      </nav> -->
+    </div>
+  </div>
+  <hr />
+  <div class="nhsuk-grid-row">
+    <!-- LIS -->
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="lis-form-ordering" class="nhsuk-heading-m">LIS Form Ordering</h2>
+      <p class="nhsuk-body-l">Toolkit version: Elements v1.0.22954</p>
+      <div class="nhsbsa-service-info__container nhsuk-u-margin-bottom-4">
+        <img class="service-img" src="/images/hwhc/lis-form-ordering.png" alt="LIS Form Ordering home page" />
+      </div>
+      <h3 class="nhsuk-heading-s">Description</h3>
+      <p>Users who want to apply for the NHS Low income scheme can order paper forms to be delivered using LIS Form Ordering.</p>
+      
+      <h3 class="nhsuk-heading-s">Notes</h3>
+      <p>LIS form ordering is hosted on SVN and required a Jboss server to run locally.</p>
+      <p>When deploying front end changes to LIS form ordering remember to get the extract tested. To make sure any updates to the system don't cause the extract to fail.</p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <div class="tech-container nhsuk-u-margin-bottom-4">
+        <h3 class="nhsuk-heading-m">Languages</h3>
+        <span class="tech-tag java-tag">Java 8</span>
+        <span class="tech-tag html-tag">HTML5</span>
+        <span class="tech-tag css-tag">CSS3</span>
+        <span class="tech-tag javascript-tag">Javascript</span>
+        <span class="tech-tag jsp-tag">JSP</span>
+      </div>
+      <nav class="link-nav">
+        <h3 class="nhsuk-heading-m">Links</h3>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="https://applications.nhsbsa.nhs.uk/LISWebAppStaticData/begin.do">LIS form ordering live service</a></li>
+          <li><a href="http://fi2.nhsbsa.nhs.uk/LISSYST/LISWebAppStaticData/begin.do">LIS form ordering test environment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+{% endblock %}
